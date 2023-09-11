@@ -1,0 +1,15 @@
+html {
+	@apply bg-offwhite text-dark selection:bg-dark selection:text-offwhite text-[18px] md:text-[21px];
+}
+
+body {
+	font-family: poppins, sans-serif;
+	font-weight: 200;
+	
+	@apply font-body font-extralight text-base;
+	
+}
+
+h1, h2, h3, h4, h5, h6 {
+	@apply font-heading;
+}

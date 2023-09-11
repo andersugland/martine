@@ -2,21 +2,11 @@
 	let email = 'PLACE@HOLD.ER';
 </script>
 
-<header class="w-full bg-offwhite grid justify-end fixed top-0 mr-8 py-4 overflow-hidden">
-	<a
-		href={`mailto:${email}`}
-		class=" translate-x-[30px] hover:translate-x-0 transition-transform duration-200 ease-in-out"
-	>
+<header class="w-full grid justify-end fixed top-0 mr-8 py-4 overflow-hidden">
+	<a href={`mailto:${email}`} class=" translate-x-[30px] hover:translate-x-0 transition-transform duration-200 ease-in-out">
 		<span class="flex gap-4 items-center text-dark">
 			<h2 class="text-md justify-self-end">Kontakt meg</h2>
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				fill="none"
-				viewBox="0 0 24 24"
-				stroke-width="1.5"
-				stroke="currentColor"
-				class="w-6 h-6"
-			>
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
 				<path
 					stroke-linecap="round"
 					stroke-linejoin="round"

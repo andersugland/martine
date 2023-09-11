@@ -23,7 +23,7 @@ export default {
 				'xl': ['3.375rem', '1.75'],
 				'2xl': ['5.063rem', '1.75'],
 				'3xl': ['7.594rem', '1.75'],
-				'2xl-clamp': 'clamp(3.375rem, 10vw, 5.063rem)',
+				'2xl-clamp': 'clamp(3.25rem, 10vw, 5.063rem)',
 				'3xl-clamp': 'clamp(5.063rem, 10vw, 7.594rem)',
 			},
 			spacing: {

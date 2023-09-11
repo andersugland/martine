@@ -12,7 +12,7 @@
 
 <Header />
 <button on:click={handleClick} class="bg-dark text-offwhite p-2 text-sm fixed">dark</button>
-<main class={`${dark === true && 'dark'}`}>
+<main class={`${dark === true && 'dark'} overflow-x-hidden`}>
 	<slot />
 </main>
 <Footer />

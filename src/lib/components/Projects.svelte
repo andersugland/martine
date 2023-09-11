@@ -12,9 +12,7 @@
 	</div>
 	<ul class="grid lg:grid-cols-2 xl:grid-cols-12 gap-md lg:gap-y-lg mt-md lg:mt-[150px] xl:mt-[200px]">
 		{#each projects as project, i}
-			<li class={`${i % 2 === 0 ? 'xl:col-start-2' : 'xl:col-start-1'} lg:col-span-full xl:col-span-11 grid`}>
 				<ProjectCard title={project?.title} excerpt={project?.excerpt} image={project?.image} date={project?.date} index={i} />
-			</li>
 		{/each}
 	</ul>
 </section>

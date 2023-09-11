@@ -28,15 +28,37 @@ export async function getPost(slug) {
 export async function getFrontPage() {
 	return await client.fetch(
 		groq`*[_type == 'frontPage'][0] {
-      title,
-      excerpt,
-      'projectShowcase': projectShowcase.projects[]-> {
-        title,
-        excerpt,
-        'image': mainImage,
-        date,
-      },
-      'image': mainImage.image,
-    }`
+			title,
+			excerpt,
+			about,
+			projectShowcase {
+				title,
+			'projects': projects[]-> {
+				title,
+				excerpt,
+				'image': mainImage,
+				date,
+			},
+			},
+			'image': mainImage.image,
+			contact,
+		}`
 	);
 }
+// export async function getFrontPage() {
+// 	return await client.fetch(
+// 		groq`*[_type == 'frontPage'][0] {
+// 			title,
+// 			excerpt,
+// 			about,
+// 			'projectShowcase': projectShowcase.projects[]-> {
+// 				title,
+// 				excerpt,
+// 				'image': mainImage,
+// 				date,
+// 			},
+// 			'image': mainImage.image,
+// 			contact,
+// 		}`
+// 	);
+// }

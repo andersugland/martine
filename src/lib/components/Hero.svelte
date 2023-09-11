@@ -2,9 +2,11 @@
 	export let title, excerpt;
 </script>
 
-<section class="container px-4 grid grid-cols-12">
-	<h1 class="text-3xl col-span-full">{title}</h1>
-	<div class="col-start-2 col-span-8 text-md font-thin border-l-4 border-dark pl-10">
-		<p>{excerpt}</p>
+<section class="container px-4 min-h-screen grid items-center">
+	<div class="grid md:grid-cols-12 items-center">
+		<h1 class="text-3xl-clamp leading-[1.15em] col-span-full">{title}</h1>
+		<div class="md:col-start-2 md:col-span-10 text-md font-thin mt-sm md:mt-md ml-4 md:ml-0">
+			<p class="border-l-2 md:border-l-4 border-dark pl-4 md:pl-10">{excerpt}</p>
+		</div>
 	</div>
 </section>

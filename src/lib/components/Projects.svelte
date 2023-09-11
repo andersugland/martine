@@ -1,13 +1,18 @@
 <script>
 	import ProjectCard from '$lib/components/ProjectCard.svelte';
 
-	export let projects;
+	export let title, projects;
 </script>
 
-<section class="container px-4 md:px-8 mt-48">
-	<ul class="grid grid-cols-12 gap-20">
+<section class="container px-4 md:px-8 mt-md md:mt-lg">
+	<div class="grid md:grid-cols-12">
+		<div class="md:col-start-2 md:col-span-10 text-md font-thin mt-sm md:mt-md ml-4 md:ml-0">
+			<h2 class="text-2xl-clamp leading-[1.15em] max-w-[12ch] border-l-2 md:border-l-4 border-dark pl-4 md:pl-10">{title}</h2>
+		</div>
+	</div>
+	<ul class="grid lg:grid-cols-2 xl:grid-cols-12 gap-md lg:gap-y-lg mt-md lg:mt-[150px] xl:mt-[200px]">
 		{#each projects as project, i}
-			<li class={`${i % 2 === 0 ? 'col-start-2' : 'col-start-1'} col-span-11 grid gap-x-[30px]`}>
+			<li class={`${i % 2 === 0 ? 'xl:col-start-2' : 'xl:col-start-1'} lg:col-span-full xl:col-span-11 grid`}>
 				<ProjectCard title={project?.title} excerpt={project?.excerpt} image={project?.image} date={project?.date} index={i} />
 			</li>
 		{/each}

@@ -45,20 +45,12 @@ export async function getFrontPage() {
 		}`
 	);
 }
-// export async function getFrontPage() {
-// 	return await client.fetch(
-// 		groq`*[_type == 'frontPage'][0] {
-// 			title,
-// 			excerpt,
-// 			about,
-// 			'projectShowcase': projectShowcase.projects[]-> {
-// 				title,
-// 				excerpt,
-// 				'image': mainImage,
-// 				date,
-// 			},
-// 			'image': mainImage.image,
-// 			contact,
-// 		}`
-// 	);
-// }
+
+export async function getSettings() {
+	return await client.fetch(
+		groq`*[_type == 'siteSettings'][0]{
+			siteTitle,
+			'email': contactInfo.email,
+		}`
+	);
+}

@@ -7,15 +7,15 @@
 
 	export let data;
 
-	$: ({ frontPage } = data);
+	$: ({ frontPage, settings } = data);
 
 	console.log(data);
 </script>
 
 <Hero title={frontPage?.title} excerpt={frontPage?.excerpt} />
-<FullWidthImage width={2560} image={frontPage?.image} styling={''} />
+<FullWidthImage width={2560} image={frontPage?.image} styling="w-full aspect-[1] md:aspect-[1.5] lg:aspect-auto h-full max-h-[750px]" />
 <About title={frontPage?.about?.title} excerpt={frontPage?.about?.excerpt} />
 {#if frontPage?.projectShowcase.projects.length}
 	<Projects title={frontPage?.projectShowcase?.title} projects={frontPage?.projectShowcase.projects} />
 {/if}
-<Contact title={frontPage?.contact?.title} ctaText={frontPage?.contact?.ctaText} />
+<Contact title={frontPage?.contact?.title} ctaText={frontPage?.contact?.ctaText} email={settings?.email} />

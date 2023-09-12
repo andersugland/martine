@@ -3,6 +3,6 @@
 	export let image, width, styling;
 </script>
 
-<section class="grid h-[450px] md:h-[600px] xl:h-[750px]">
+<section class="grid">
 	<Image {width} {image} {styling} />
 </section>

@@ -4,8 +4,8 @@
 	export let title, excerpt, image, date, index;
 </script>
 
-<li class={`${index % 2 === 0 ? 'xl:col-start-2' : 'xl:col-start-1'} lg:col-span-full xl:col-span-11 grid`}>
-	<div class={`flex flex-col-reverse lg:flex-row gap-sm lg:gap-md lg:items-center ${index % 2 === 0 && 'lg:flex-row-reverse'}`}>
+<li class={`${index % 2 === 0 ? 'xl:col-start-1' : 'xl:col-start-2'} lg:col-span-full xl:col-span-11 grid`}>
+	<div class={`flex flex-col-reverse lg:flex-row gap-sm lg:gap-md lg:items-center ${index % 2 !== 0 && 'lg:flex-row-reverse'}`}>
 		<div class="lg:flex-1">
 			<h3 class="text-lg md:text-xl !leading-none max-w-[12ch]">{title}</h3>
 			{#if date}
@@ -20,7 +20,7 @@
 			<p class="mt-4 lg:md-8">{excerpt}</p>
 		</div>
 		<div class="lg:flex-1 aspect-square bg-dark rounded-lg">
-			<Image {image} />
+			<Image width={1024} {image} />
 		</div>
 	</div>
 </li>

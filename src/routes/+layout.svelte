@@ -3,17 +3,17 @@
 	import Header from './Header.svelte';
 	import Footer from './Footer.svelte';
 
-	let dark = true;
+	export let data;
 
-	console.log(dark);
-
-	const handleClick = () => dark = !dark
+	$: ({ settings } = data);
 </script>
 
-<Header />
-<button on:click={handleClick} class="bg-dark text-offwhite p-2 text-sm fixed">dark</button>
-<main class={`${dark === true && 'dark'} overflow-x-hidden`}>
+<svelte:head>
+	<title>{settings?.siteTitle}</title>
+</svelte:head>
+
+<Header email={settings?.email} />
+<main class="overflow-x-hidden">
 	<slot />
 </main>
 <Footer />
-

@@ -8,8 +8,8 @@ export default {
 				center: true
 			},
 			colors: {
-				offwhite: '#fffbf7',
-				dark: '#221508'
+				offwhite: '#f8f1ea',
+				dark: '#211408'
 			},
 			fontFamily: {
 				heading: ['Prata', 'serif'],

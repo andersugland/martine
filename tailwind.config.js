@@ -30,6 +30,9 @@ export default {
 				sm: '30px',
 				md: '80px',
 				lg: '240px'
+			},
+			transitionTimingFunction: {
+				'quint-out': 'cubic-bezier(0.22, 1, 0.36, 1)',
 			}
 		}
 	},

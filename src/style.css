@@ -1,3 +1,4 @@
+
 html {
 	@apply bg-offwhite text-dark selection:bg-dark selection:text-offwhite text-[18px] md:text-[21px];
 }

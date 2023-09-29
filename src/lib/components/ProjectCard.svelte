@@ -2,6 +2,15 @@
 	import Image from './Image.svelte';
 
 	export let title, excerpt, image, date, index;
+
+	function formatDate(date) {
+		return new Date(date).toLocaleDateString('no-NO', {
+			day: '2-digit',
+			month: '2-digit',
+			year: 'numeric',
+		});
+	}
+
 </script>
 
 <li class={`${index % 2 === 0 ? 'xl:col-start-1' : 'xl:col-start-2'} lg:col-span-full xl:col-span-11 grid`}>
@@ -11,16 +20,16 @@
 			{#if date.startDate}
 				<div class="flex text-base md:text-md md:font-thin !leading-none pt-2 pb-1 max-w-max border-b border-dark">
 					{#if date.startDate && date.endDate}
-						<p>{date.startDate} — {date.endDate}</p>
+						<p>{formatDate(date.startDate)} — {formatDate(date.endDate)}</p>
 					{:else}
-						<p>{date.startDate} — Nåværende</p>
+						<p>{formatDate(date.startDate)} — Nåværende</p>
 					{/if}
 				</div>
 			{/if}
 			<p class="mt-4 lg:md-8">{excerpt}</p>
 		</div>
-		<div class="lg:flex-1 aspect-square bg-dark rounded-lg">
-			<Image width={1024} {image} />
+		<div class="lg:flex-1 aspect-square">
+			<Image maxWidth={1024} maxHeight={1024} {image} quality={100} styling="w-full h-full object-cover rounded-lg" />
 		</div>
 	</div>
 </li>

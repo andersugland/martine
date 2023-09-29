@@ -1,20 +1,22 @@
 <script>
 	import Hero from '$lib/components/Hero.svelte';
-	import FullWidthImage from '$lib/components/FullWidthImage.svelte';
 	import Projects from '$lib/components/Projects.svelte';
-	import About from '../lib/components/About.svelte';
-	import Contact from '../lib/components/Contact.svelte';
+	import About from '$lib/components/About.svelte';
+	import Contact from '$lib/components/Contact.svelte';
+	import Image from '$lib/components/Image.svelte';
 
 	export let data;
 
 	$: ({ frontPage, settings } = data);
 
-	console.log(data);
 </script>
 
 <Hero title={frontPage?.title} excerpt={frontPage?.excerpt} />
-<FullWidthImage width={2560} image={frontPage?.image} styling="w-full aspect-[1] md:aspect-[1.5] lg:aspect-auto h-full max-h-[750px]" />
-<About title={frontPage?.about?.title} excerpt={frontPage?.about?.excerpt} />
+
+<!-- <div class="grid">
+	
+</div> -->
+<About title={frontPage?.about?.title} excerpt={frontPage?.about?.excerpt} image={frontPage?.image} />
 {#if frontPage?.projectShowcase.projects.length}
 	<Projects title={frontPage?.projectShowcase?.title} projects={frontPage?.projectShowcase.projects} />
 {/if}

@@ -1,6 +1,5 @@
 <script>
 	export let title, ctaText, email;
-	console.log(email);
 </script>
 
 <section class="grid place-items-center mt-md md:mt-lg bg-dark text-offwhite selection:bg-offwhite selection:text-dark py-md md:py-lg">

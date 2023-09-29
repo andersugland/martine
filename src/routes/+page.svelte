@@ -3,7 +3,6 @@
 	import Projects from '$lib/components/Projects.svelte';
 	import About from '$lib/components/About.svelte';
 	import Contact from '$lib/components/Contact.svelte';
-	import Image from '$lib/components/Image.svelte';
 
 	export let data;
 

@@ -50,6 +50,7 @@ export async function getSettings() {
 	return await client.fetch(
 		groq`*[_type == 'siteSettings'][0]{
 			siteTitle,
+			siteDescription,
 			'email': contactInfo.email,
 		}`
 	);

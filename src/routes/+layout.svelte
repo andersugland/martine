@@ -13,6 +13,7 @@
 
 <svelte:head>
 	<title>{settings?.siteTitle}</title>
+	<meta name="description" content={settings?.siteDescription} />
 </svelte:head>
 
 <Header email={settings?.email} />

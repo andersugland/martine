@@ -4,10 +4,10 @@
 </script>
 
 <footer class="pt-4 bg-dark text-offwhite">
-	<div class="container pb-2 flex gap-1 justify-end pr-4 md:pr-0">
+	<div class="container pb-4 md:pb-2 flex gap-1 justify-end pr-6 md:pr-4 md:pr-0">
 		<span class="group text-sm flex gap-1">
 			Kode og design av 
-			<a href="https://www.andersugland.com/" class="relative group">
+			<a href="https://www.andersugland.com/" target="_blank" class="relative group">
 				Anders Ugland
 				<div class="absolute bottom-0 left-0 w-full h-px bg-offwhite transform transition-all duration-300 ease-quint-out group-hover:w-0 group-hover:left-full"></div>
 			</a>

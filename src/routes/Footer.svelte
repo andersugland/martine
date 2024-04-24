@@ -6,10 +6,10 @@
 <footer class="pt-4 bg-dark text-offwhite">
 	<div class="container pb-4 md:pb-2 flex gap-1 justify-end pr-6 md:pr-4 md:pr-0">
 		<span class="group text-sm flex gap-1">
-			Kode og design av 
-			<a href="https://www.andersugland.com/" target="_blank" class="relative group">
+			Kode og design av
+			<a href="https://www.andersugland.com/" target="_blank" class="relative group block">
 				Anders Ugland
-				<div class="absolute bottom-0 left-0 w-full h-px bg-offwhite transform transition-all duration-300 ease-quint-out group-hover:w-0 group-hover:left-full"></div>
+				<div class="absolute bottom-0 left-0 w-full h-px bg-offwhite transform transition-all duration-300 ease-quint-out group-hover:w-0 group-hover:left-full" />
 			</a>
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-2 md:w-3 transition-all duration-300 ease-in-out group-hover:-translate-y-1">
 				<path

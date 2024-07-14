@@ -32,7 +32,9 @@ export default {
 				lg: '240px'
 			},
 			transitionTimingFunction: {
-				'quint-out': 'cubic-bezier(0.22, 1, 0.36, 1)'
+				'quint-in': 'cubic-bezier(0.64, 0, 0.78, 0)',
+				'quint-out': 'cubic-bezier(0.22, 1, 0.36, 1)',
+				'quart-out': 'cubic-bezier(0.25, 1, 0.5, 1);'
 			}
 		}
 	},

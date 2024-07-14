@@ -6,7 +6,7 @@
 	// $: ({ email } = data);
 </script>
 
-<header class="w-full bg-offwhite grid justify-end fixed top-0 right-0 py-2 pr-4 md:pr-0 overflow-hidden">
+<header class="w-full bg-offwhite grid justify-end fixed z-20 top-0 right-0 py-2 pr-4 md:pr-0 overflow-hidden">
 	<a href={`mailto:${email}`} class="group">
 		<span class="flex gap-2 md:gap-4 items-center text-dark">
 			<h2 class="text-md justify-self-end md:translate-x-[25px] md:group-hover:translate-x-[-25px] md:transition-transform md:duration-200 md:ease-in-out">Kontakt meg</h2>
